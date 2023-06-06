@@ -171,4 +171,8 @@ button:hover {
 .display-calc {
   max-width: 450px;
   word-wrap: break-word;
+  font-family: "Merriweather", serif;
+  font-family: "Pacifico", cursive;
+  font-family: "PT Serif", serif;
+  font-family: "Urbanist", sans-serif;
 }

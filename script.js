@@ -78,7 +78,6 @@ function calculation(operator) {
 
   document.querySelector('.display-calc').textContent = res;
   input = String(res);
-  console.log(input);
   return;
 }
 
