@@ -1,9 +1,9 @@
 let plus = document.querySelector('.plus');
 let minus = document.querySelector('.multiply');
 let euqal = document.querySelector('.equal');
+let clear = document.querySelector('.btn-clr');
 let input = "";
 let res = 0;
-let arrayResult = [];
 
 function displayKeys(value) {
   input = input + String(value);
@@ -15,37 +15,84 @@ function clearNumbers() {
   document.querySelector('.display-calc').textContent = "";
 }
 
-const addition = function (result, number) {
-  return Number(result) + Number(number);
-}
 
 
 document.querySelectorAll('.number').forEach(num => num.addEventListener('click', function () {
 
   if (input.length <= 45) {
     displayKeys(this.value);
-
-
-
   }
+  // console.log(input);
+}));
 
-  arrayResult.push(this.value);
-  console.log(arrayResult);
+// Operation onclick event
+document.querySelectorAll('.operations').forEach(operation => operation.addEventListener('click', function () {
+
+  displayKeys(this.value);
 
 }));
 
 euqal.addEventListener('click', function () {
+  if (input.includes('+')) {
+    calculation('+');
+    return;
+  }
 
+  if (input.includes('-')) {
+    calculation('-');
+    return;
+  }
+
+  if (input.includes('*')) {
+    calculation('*');
+    return;
+  }
+
+  if (input.includes('/')) {
+    calculation('/');
+    return;
+  }
 
 });
 
-function calculation(signs) {
+clear.addEventListener('click', clearNumbers);
 
-  switch (signs) {
-    case '+': {
-      addition(result,)
-      break;
-    }
+
+function calculation(operator) {
+  let op = String(operator);
+  let numbers = input.split(op);
+
+  let firstNumber = numbers[0];
+  let secondNumber = numbers[1];
+  if (op === '+') {
+    res = (Number(firstNumber)) + (Number(secondNumber));
+
+  } else if (op === '-') {
+    res = (Number(firstNumber)) - (Number(secondNumber));
+  } else if (op === '*') {
+    res = (Number(firstNumber)) * (Number(secondNumber));
+  } else if (op === '/') {
+    res = (Number(firstNumber)) / (Number(secondNumber));
   }
+
+
+  document.querySelector('.display-calc').textContent = res;
+  input = String(res);
+  console.log(input);
+  return;
 }
 
+
+/// Old Logic
+/*
+let numbers = input.split('/');
+
+let firstNumber = numbers[0];
+let secondNumber = numbers[1];
+console.log(firstNumber, secondNumber);
+res = Number(firstNumber) / Number(secondNumber);
+
+document.querySelector('.display-calc').textContent = res;
+input = String(res);
+console.log(input);
+return; */
