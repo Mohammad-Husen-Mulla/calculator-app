@@ -5,24 +5,23 @@ let clear = document.querySelector('.btn-clr');
 let input = "";
 let res = 0;
 
+// Function to Display the Number
 function displayKeys(value) {
   input = input + String(value);
   document.querySelector('.display-calc').textContent = input;
 }
 
+// Function To Clear The Screen
 function clearNumbers() {
   input = "";
   document.querySelector('.display-calc').textContent = "";
 }
-
-
 
 document.querySelectorAll('.number').forEach(num => num.addEventListener('click', function () {
 
   if (input.length <= 45) {
     displayKeys(this.value);
   }
-  // console.log(input);
 }));
 
 // Operation onclick event
