@@ -2,8 +2,10 @@ let plus = document.querySelector('.plus');
 let minus = document.querySelector('.multiply');
 let euqal = document.querySelector('.equal');
 let clear = document.querySelector('.btn-clr');
+let operators = document.querySelectorAll('.operations');
 let input = "";
 let res = 0;
+let newResult = 0;
 
 // Function to Display the Number
 function displayKeys(value) {
@@ -32,6 +34,9 @@ document.querySelectorAll('.operations').forEach(operation => operation.addEvent
 }));
 
 euqal.addEventListener('click', function () {
+
+
+
   if (input.includes('+')) {
     calculation('+');
     return;
@@ -80,6 +85,25 @@ function calculation(operator) {
   return;
 }
 
+
+// operators.forEach(op => op.addEventListener('click', function () {
+
+
+//   if (this.value === '+') {
+//     displayKeys(this.value);
+//     let nums = input.split('+');
+//     newResult += Number(nums[0]);
+//     document.querySelector('.display-calc').textContent = newResult;
+//     console.log(newResult);
+//     input = String(newResult);
+//     return;
+//   }
+
+
+// Function for length lessthan 3
+
+
+// }));
 
 /// Old Logic
 /*
