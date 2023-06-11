@@ -35,8 +35,6 @@ document.querySelectorAll('.operations').forEach(operation => operation.addEvent
 
 euqal.addEventListener('click', function () {
 
-
-
   if (input.includes('+')) {
     calculation('+');
     return;
@@ -60,7 +58,6 @@ euqal.addEventListener('click', function () {
 });
 
 clear.addEventListener('click', clearNumbers);
-
 
 function calculation(operator) {
   let op = String(operator);
@@ -101,7 +98,6 @@ function calculation(operator) {
 
 
 // Function for length lessthan 3
-
 
 // }));
 

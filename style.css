@@ -51,7 +51,6 @@ body {
 .numbers button {
   width: 110px;
   height: 50px;
-  /* cursor: pointer; */
   gap: 5px;
   font-size: larger;
 }
@@ -143,7 +142,6 @@ body {
   font-size: larger;
   cursor: pointer;
   border-radius: 5px;
-  /* background-color: #787a91; */
 }
 .minus,
 .plus,
