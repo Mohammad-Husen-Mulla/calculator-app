@@ -5,7 +5,6 @@ let clear = document.querySelector('.btn-clr');
 let operators = document.querySelectorAll('.operations');
 let input = "";
 let res = 0;
-let newResult = 0;
 
 // Function to Display the Number
 function displayKeys(value) {
@@ -25,6 +24,14 @@ document.querySelectorAll('.number').forEach(num => num.addEventListener('click'
     displayKeys(this.value);
   }
 }));
+
+// Backspace event
+
+document.querySelector('.btn-delete').addEventListener('click', function () {
+  const sub = input.substring(0, input.length - 1);
+  document.querySelector('.display-calc').textContent = sub;
+});
+
 
 // Operation onclick event
 document.querySelectorAll('.operations').forEach(operation => operation.addEventListener('click', function () {
