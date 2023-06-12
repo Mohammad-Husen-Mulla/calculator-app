@@ -28,8 +28,15 @@ document.querySelectorAll('.number').forEach(num => num.addEventListener('click'
 // Backspace event
 
 document.querySelector('.btn-delete').addEventListener('click', function () {
-  const sub = input.substring(0, input.length - 1);
-  document.querySelector('.display-calc').textContent = sub;
+
+  if (input.length === 1) {
+    clearNumbers();
+  } else if (input.length > 1) {
+    const sub = input.substring(0, input.length - 1);
+    document.querySelector('.display-calc').textContent = sub;
+    input = sub;
+  }
+
 });
 
 
