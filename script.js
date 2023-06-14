@@ -1,5 +1,3 @@
-let plus = document.querySelector('.plus');
-let minus = document.querySelector('.multiply');
 let euqal = document.querySelector('.equal');
 let clear = document.querySelector('.btn-clr');
 let operators = document.querySelectorAll('.operations');
@@ -26,7 +24,6 @@ document.querySelectorAll('.number').forEach(num => num.addEventListener('click'
 }));
 
 // Backspace event
-
 document.querySelector('.btn-delete').addEventListener('click', function () {
 
   if (input.length === 1) {
@@ -90,7 +87,6 @@ function calculation(operator) {
     res = (Number(firstNumber)) / (Number(secondNumber));
   }
 
-
   document.querySelector('.display-calc').textContent = res;
   input = String(res);
   return;
@@ -98,7 +94,6 @@ function calculation(operator) {
 
 
 // operators.forEach(op => op.addEventListener('click', function () {
-
 
 //   if (this.value === '+') {
 //     displayKeys(this.value);
@@ -109,7 +104,6 @@ function calculation(operator) {
 //     input = String(newResult);
 //     return;
 //   }
-
 
 // Function for length lessthan 3
 
