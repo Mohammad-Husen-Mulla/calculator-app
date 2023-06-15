@@ -91,34 +91,3 @@ function calculation(operator) {
   input = String(res);
   return;
 }
-
-
-// operators.forEach(op => op.addEventListener('click', function () {
-
-//   if (this.value === '+') {
-//     displayKeys(this.value);
-//     let nums = input.split('+');
-//     newResult += Number(nums[0]);
-//     document.querySelector('.display-calc').textContent = newResult;
-//     console.log(newResult);
-//     input = String(newResult);
-//     return;
-//   }
-
-// Function for length lessthan 3
-
-// }));
-
-/// Old Logic
-/*
-let numbers = input.split('/');
-
-let firstNumber = numbers[0];
-let secondNumber = numbers[1];
-console.log(firstNumber, secondNumber);
-res = Number(firstNumber) / Number(secondNumber);
-
-document.querySelector('.display-calc').textContent = res;
-input = String(res);
-console.log(input);
-return; */
