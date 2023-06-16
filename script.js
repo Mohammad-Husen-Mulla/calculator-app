@@ -1,6 +1,7 @@
-let euqal = document.querySelector('.equal');
-let clear = document.querySelector('.btn-clr');
-let operators = document.querySelectorAll('.operations');
+const euqal = document.querySelector('.equal');
+const clear = document.querySelector('.btn-clr');
+const operators = document.querySelectorAll('.operations');
+const delteButton = document.querySelector('.btn-delete');
 let input = "";
 let res = 0;
 
@@ -24,7 +25,7 @@ document.querySelectorAll('.number').forEach(num => num.addEventListener('click'
 }));
 
 // Backspace event
-document.querySelector('.btn-delete').addEventListener('click', function () {
+delteButton.addEventListener('click', function () {
 
   if (input.length === 1) {
     clearNumbers();
