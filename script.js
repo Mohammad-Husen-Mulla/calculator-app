@@ -13,7 +13,7 @@ function displayKeys(value) {
 // Function To Clear The Screen
 function clearNumbers() {
   input = "";
-  document.querySelector('.display-calc').textContent = "";
+  document.querySelector('.display-calc').textContent = input;
 }
 
 document.querySelectorAll('.number').forEach(num => num.addEventListener('click', function () {
@@ -29,7 +29,7 @@ document.querySelector('.btn-delete').addEventListener('click', function () {
   if (input.length === 1) {
     clearNumbers();
   } else if (input.length > 1) {
-    const sub = input.substring(0, input.length - 1);
+    let sub = input.substring(0, input.length - 1);
     document.querySelector('.display-calc').textContent = sub;
     input = sub;
   }
@@ -74,19 +74,20 @@ function calculation(operator) {
   let op = String(operator);
   let numbers = input.split(op);
 
-  let firstNumber = numbers[0];
-  let secondNumber = numbers[1];
+  let firstNumber = Number(numbers[0]);
+  let secondNumber = Number(numbers[1]);
   if (op === '+') {
-    res = (Number(firstNumber)) + (Number(secondNumber));
+    res = (firstNumber) + (secondNumber);
 
   } else if (op === '-') {
-    res = (Number(firstNumber)) - (Number(secondNumber));
+    res = (firstNumber) - (secondNumber);
   } else if (op === '*') {
-    res = (Number(firstNumber)) * (Number(secondNumber));
+    res = (firstNumber) * (secondNumber);
   } else if (op === '/') {
-    res = (Number(firstNumber)) / (Number(secondNumber));
+    res = (firstNumber) / (secondNumber);
   }
 
+  res ||= "Invalid";
   document.querySelector('.display-calc').textContent = res;
   input = String(res);
   return;
