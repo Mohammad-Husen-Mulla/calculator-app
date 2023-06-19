@@ -46,7 +46,6 @@ document.querySelectorAll('.operations').forEach(operation => operation.addEvent
 }));
 
 euqal.addEventListener('click', function () {
-
   if (input.includes('+')) {
     calculation('+');
     return;
@@ -88,7 +87,9 @@ function calculation(operator) {
     res = (firstNumber) / (secondNumber);
   }
 
-  res ||= "Invalid";
+  if (!res && res !== 0) {
+    res = 'INVALID';
+  }
   document.querySelector('.display-calc').textContent = res;
   input = String(res);
   return;
