@@ -5,7 +5,7 @@ const delteButton = document.querySelector('.btn-delete');
 let input = "";
 let res = 0;
 
-// Function to Display the Number
+// Function to Display the Numbers
 function displayKeys(value) {
   input = input + String(value);
   document.querySelector('.display-calc').textContent = input;
@@ -36,7 +36,6 @@ delteButton.addEventListener('click', function () {
   }
 
 });
-
 
 // Operation onclick event
 document.querySelectorAll('.operations').forEach(operation => operation.addEventListener('click', function () {
