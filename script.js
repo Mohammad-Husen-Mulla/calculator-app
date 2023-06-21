@@ -39,9 +39,7 @@ delteButton.addEventListener('click', function () {
 
 // Operation onclick event
 document.querySelectorAll('.operations').forEach(operation => operation.addEventListener('click', function () {
-
   displayKeys(this.value);
-
 }));
 
 euqal.addEventListener('click', function () {
