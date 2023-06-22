@@ -5,6 +5,11 @@
 body {
   background-color: #ff0060;
 }
+.btn {
+  cursor: pointer;
+  width: 110px;
+}
+
 .main {
   width: 500px;
   height: 600px;
@@ -49,7 +54,6 @@ body {
 }
 
 .numbers button {
-  width: 110px;
   height: 50px;
   gap: 5px;
   font-size: larger;
@@ -86,9 +90,7 @@ body {
 }
 
 .btn-dot {
-  width: 110px;
   height: 50px;
-  cursor: pointer;
 }
 
 .side-sign {
@@ -102,7 +104,6 @@ body {
   gap: 10px;
 }
 .side-sign button {
-  width: 110px;
   height: 50px;
 }
 
@@ -111,7 +112,6 @@ body {
   position: absolute;
   top: 415px;
   left: 375px;
-  width: 110px;
   height: 110px;
   font-size: larger;
 }
@@ -135,18 +135,14 @@ body {
 }
 
 .middle button {
-  cursor: pointer;
-  width: 110px;
   height: 50px;
   font-size: larger;
-  cursor: pointer;
   border-radius: 5px;
 }
 .minus,
 .plus,
 .number,
 .equal {
-  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -171,5 +167,5 @@ button:hover {
   font-family: "Merriweather", serif;
   font-family: "Pacifico", cursive;
   font-family: "PT Serif", serif;
-  /* font-family: "Urbanist", sans-serif; */
+  font-family: "Urbanist", sans-serif;
 }
