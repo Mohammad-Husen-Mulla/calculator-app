@@ -2,6 +2,7 @@ const euqal = document.querySelector('.equal');
 const clear = document.querySelector('.btn-clr');
 const operators = document.querySelectorAll('.operations');
 const delteButton = document.querySelector('.btn-delete');
+const numbers = document.querySelectorAll('.number');
 let input = "";
 let res = 0;
 
@@ -17,7 +18,7 @@ function clearNumbers() {
   document.querySelector('.display-calc').textContent = input;
 }
 
-document.querySelectorAll('.number').forEach(num => num.addEventListener('click', function () {
+numbers.forEach(num => num.addEventListener('click', function () {
 
   if (input.length <= 45) {
     displayKeys(this.value);
