@@ -92,3 +92,5 @@ function calculation(operator) {
   input = String(res);
   return;
 }
+
+// Goa a bug, when multiplying -num with +
