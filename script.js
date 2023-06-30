@@ -49,7 +49,16 @@ euqal.addEventListener('click', function () {
     return;
   }
 
-  if (input.includes('-')) {
+  if (input.includes('-') && !input.includes('*') && !input.includes('+') && !input.includes('/')) {
+    if (input.indexOf('-') == 0) {
+      const j = input.split('-').slice(1).map(e => e * (-1)).reduce((acc, e) => {
+        acc += e;
+        return acc;
+      }, 0);
+      res = j;
+      document.querySelector('.display-calc').textContent = res;
+      input = String(res);
+    }
     calculation('-');
     return;
   }
